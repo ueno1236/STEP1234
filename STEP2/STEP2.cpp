@@ -17,7 +17,6 @@ void WallPeper();
 void FreeRELEASES();
 
 
-
 int WINAPI WinMain(
 	HINSTANCE hInstance,
 	HINSTANCE hPrevInstance,
@@ -149,28 +148,6 @@ HRESULT InitD3d(HWND hWnd) {
 	D3DVIEWPORT9 viewport{ 0,0,d3dpp.BackBufferWidth,d3dpp.BackBufferHeight,0.0f,1.0f };
 	g_pDevice->SetViewport(&viewport);
 
-
-	//描画方法の設定--------------------------------------------------------------------わからん
-	g_pDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, true);
-	g_pDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_SRCALPHA);  //SRCの設定
-	g_pDevice->SetRenderState(D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA);
-	g_pDevice->SetRenderState(D3DRS_DIFFUSEMATERIALSOURCE, D3DMCS_COLOR1);
-
-	g_pDevice->SetTextureStageState(0, D3DTSS_COLORARG1, D3DTA_TEXTURE);
-	g_pDevice->SetTextureStageState(0, D3DTSS_COLORARG2, D3DTA_DIFFUSE);
-
-	g_pDevice->SetTextureStageState(0, D3DTSS_COLOROP, D3DTOP_MODULATE);
-
-	g_pDevice->SetTextureStageState(0, D3DTSS_ALPHAARG1, D3DTA_TEXTURE);
-	g_pDevice->SetTextureStageState(0, D3DTSS_ALPHAARG2, D3DTA_DIFFUSE);
-
-	g_pDevice->SetTextureStageState(0, D3DTSS_ALPHAOP, D3DTOP_MODULATE);
-
-
-
-	D3DXCreateTextureFromFile(g_pDevice, "bullets.png", &g_pTexture);
-	
-
 	return S_OK;
 }
 
@@ -196,7 +173,6 @@ void WallPeper() {
 	{0,0,1,1,0x00ffffff,0,0},
 	{640,0,1,1,0x00ffffff,1,0},
 	{640,480,1,1,0xffffffff,1,1},
-	{0,480,1,1,0xffffffff,0,1},
 	};
 
 	// テクスチャをステージに割り当てる
