@@ -259,7 +259,7 @@ void Enemy() {
 	{fEnemy_PosX,fEnemy_PosY+112,1,1,0xffffffff,0,112.0f / 1024.0f},
 	};
 	//0f‚ÍŠ„‚èŽZ‚Ì“š‚¦‚ðŽÀ”‚É‚·‚éˆ×‚Éfloat‚Ìf‚ð•t—^‚·‚é
-	//tu,tv‚Í‚Í‚è‚Â‚¥‚½‚¢‰æ‘œ‚Ì’†‚ÌƒTƒCƒY‚ðÝ’è‚·‚é
+	//tu,tv‚Í“\‚è•t‚¯‚½‚¢‰æ‘œ‚Ì’†‚ÌƒTƒCƒY‚ðÝ’è‚·‚é
 	//fEnemy_PosX+100‚Í¡‚ÌêŠi‚Oj‚©‚ç‰E‚É‚P‚O‚Oƒ|ƒŠƒSƒ“•`‰æ‚·‚é
 	//1024*1024‚Ì‰æ‘œ‚È‚Ì‚Å€1024
 
@@ -292,12 +292,12 @@ void Enemy2() {
 	{fEnemy2_PosX,fEnemy2_PosY + 112,1,1,0xffffffff,0,112.0f / 1024.0f},
 	};
 	//0f‚ÍŠ„‚èŽZ‚Ì“š‚¦‚ðŽÀ”‚É‚·‚éˆ×‚Éfloat‚Ìf‚ð•t—^‚·‚é
-	//tu,tv‚Í‚Í‚è‚Â‚¥‚½‚¢‰æ‘œ‚Ì’†‚ÌƒTƒCƒY‚ðÝ’è‚·‚é
+	//tu,tv‚Í“\‚è•t‚¯‚½‚¢‰æ‘œ‚Ì’†‚ÌƒTƒCƒY‚ðÝ’è‚·‚é
 	//fEnemy_PosX+100‚Í¡‚ÌêŠi‚Oj‚©‚ç‰E‚É‚P‚O‚Oƒ|ƒŠƒSƒ“•`‰æ‚·‚é
 
 
 	// ƒeƒNƒXƒ`ƒƒ‚ðƒXƒe[ƒW‚ÉŠ„‚è“–‚Ä‚é
-	g_pDevice->SetTexture(0, g_pTex_Enemy2);
+	g_pDevice->SetTexture(0, g_pTex_Enemy);
 	// •`‰æ
 	g_pDevice->DrawPrimitiveUP(D3DPT_TRIANGLEFAN, 2, vertex, sizeof(D3DCUSTOMVERTEX));
 	//D3DPT_TRIANGLEFAN‚Å‰E‰ñ‚è‚Å’¸“_‚ðŽw’è‚·‚é
@@ -366,4 +366,6 @@ void FreeRELEASES() {
 	SAFE_RELEASE(g_pDinput);
 	SAFE_RELEASE(g_pKeyDevice);
 	SAFE_RELEASE(g_pTex_Enemy);
+	SAFE_RELEASE(g_pTex_Enemy);
+	SAFE_RELEASE(g_pTex_Enemy2);
 }
