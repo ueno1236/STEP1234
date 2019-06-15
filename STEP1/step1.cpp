@@ -53,6 +53,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (iMsg)
 	{
+		Sleep(1);
 	case WM_DESTROY://windowMessage
 		PostQuitMessage(0);
 		break;

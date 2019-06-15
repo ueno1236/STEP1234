@@ -91,7 +91,8 @@ int WINAPI WinMain(
 	InitDinput(hWnd, hInstance);
 
 	while (msg.message != WM_QUIT) {
-		if (PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))
+		Sleep(1);
+		if (PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))	
 		{
 			TranslateMessage(&msg);
 			DispatchMessage(&msg);
@@ -102,7 +103,7 @@ int WINAPI WinMain(
 
 			if (currenttime - previoustime >= 1000 / 60) {
 				previoustime = currenttime;
-				Sleep(1);
+				
 				BeginScene();
 				WallPeper();
 				Enemy();
