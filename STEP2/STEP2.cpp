@@ -38,7 +38,7 @@ int WINAPI WinMain(
 	wcl.cbClsExtra = 0;
 	wcl.cbWndExtra = 0;
 	wcl.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
-
+	
 	if (!RegisterClassEx(&wcl)) {
 		return FALSE;
 	}
