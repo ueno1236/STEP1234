@@ -1,4 +1,0 @@
-﻿  STEP4.cpp
-  C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-C:\Users\kirrn\OneDrive\ドキュメント\GitHub\task-submission-STEP1234\STEP4\STEP4.cpp(137): warning C4715: 'WindowProc': 値を返さないコントロール パスがあります。
-  STEP4.vcxproj -> C:\Users\kirrn\OneDrive\ドキュメント\GitHub\task-submission-STEP1234\Debug\STEP4.exe
