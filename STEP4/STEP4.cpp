@@ -34,10 +34,10 @@ void EndScene();
 
 
 int WINAPI WinMain(
-	HINSTANCE hInstance,
-	HINSTANCE hPrevInstance,
-	LPSTR lpCmdLine,
-	INT nCmdShow) {
+	_In_ HINSTANCE hInstance,
+	_In_opt_ HINSTANCE hPrevInstance,
+	_In_  LPSTR lpCmdLine,
+	_In_ INT nCmdShow) {
 
 	HWND hWnd;
 	WNDCLASSEX wcl;
@@ -117,7 +117,7 @@ int WINAPI WinMain(
 
 	FreeRELEASES();
 
-	return msg.wParam;
+	return (INT)msg.wParam;
 }
 
 
@@ -327,7 +327,7 @@ HRESULT InitDinput(HWND hWnd, HINSTANCE hInstance) {
 
 	g_pKeyDevice->Acquire();
 
-	return S_OK;//if(FAIL‚â‚Á‚Ä‚È‚¢‚©‚çâ‘ÎS_OK‚ª•Ô‚Á‚Ä‚«‚Ä‚µ‚Ü‚¤‚¯‚Ç‚Ü‚ ‚¦‚¦‚©
+	return S_OK;
 }
 
 void KeyBind() {

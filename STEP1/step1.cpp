@@ -5,7 +5,11 @@ LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 //
 //INT WINAPI WinMain( HINSTANCE hInst,HINSTANCE hPrevInst,LPSTR szStr,INT iCmdShow)
 //アプリケーションのエントリー関数
-INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR szStr, INT iCmdShow)
+int WINAPI WinMain(
+	_In_ HINSTANCE hInst,
+	_In_opt_ HINSTANCE hPrevInst,
+	_In_  LPSTR szSt,
+	_In_ INT iCmdShow)
 {
 	HWND hWnd = NULL;
 	MSG msg;

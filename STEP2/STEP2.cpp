@@ -18,10 +18,10 @@ void FreeRELEASES();
 
 
 int WINAPI WinMain(
-	HINSTANCE hInstance,
-	HINSTANCE hPrevInstance,
-	LPSTR lpCmdLine,
-	INT nCmdShow) {
+	_In_ HINSTANCE hInstance,
+	_In_opt_ HINSTANCE hPrevInstance,
+	_In_  LPSTR lpCmdLine,
+	_In_ INT nCmdShow) {
 
 	HWND hWnd;
 	WNDCLASSEX wcl;
@@ -73,6 +73,7 @@ int WINAPI WinMain(
 
 	ZeroMemory(&msg, sizeof(msg));
 	InitD3d(hWnd);
+
 	while (msg.message != WM_QUIT) {
 		if (PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))
 		{
